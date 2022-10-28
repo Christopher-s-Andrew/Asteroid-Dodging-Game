@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at finalProject_Q4.v(16): object "LEDTimeOut" differs only in case from object "LEDTimeOUt" in the same scope File: C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/finalProject_Q4.v Line: 16
+Warning (10268): Verilog HDL information at CheckID.v(34): always construct contains both blocking and non-blocking assignments File: C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/CheckID.v Line: 34
