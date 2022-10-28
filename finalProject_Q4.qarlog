@@ -1,0 +1,47 @@
+Quartus Prime Archive log --	C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/syn/finalProject_Q4.qarlog
+
+Archive:	C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/syn/finalProject_Q4.qar
+Date:		Tue May 10 11:08:41 2022
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/AccessController.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Best_Score_Display.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/ButtonShaper.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/CheckID.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/CheckPswd.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/CrashDetector.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Decoder_3bTo7bShape.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Decoder_7SegAnode.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Digit_2_Count_Up.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Digit_Count_Up.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Display.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/GameController.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/LED_Animator.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/LetterSevenSegDecoder.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/MultiUserAuthentication.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Nhat_LEDBarDecoder.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Nhat_LEDBarTimer.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Nhat_LEDTimeTracker.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/ObjectShifter.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/OneSecondTimer.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/PlayerPosition.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Player_Score_Display.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/RNG_LFSR_3b.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Score_Control_Unit.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Score_RAM.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Score_Track.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Seg_7_Control.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Timer_100ms.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/Timer_1ms.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/UserIds.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/UserPswds.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/VariableTimer.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/src/finalProject_Q4.v
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/syn/finalProject_Q4.qpf
+C:/GitHub/Q4-ADD-Project/finalProject_TeamQ4/syn/finalProject_Q4.qsf
+c:/intelfpga/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 36 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
