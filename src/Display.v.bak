@@ -1,0 +1,86 @@
+/*
+Course Number: 5440
+Author: Gantabya Kadel, 8522
+Module Name: Display
+Description: Module created to display messages to the 6 seven segment displays of the FPGA Board. This will be combinational logic module only.
+ Comments: Made for Team Q4's Advance Digital Design Final Project. Utilizez the LetterSevenSegDecoder module.
+*/
+module Display(IdOk, PswdOk, Mode, HexOut1, HexOut2, HexOut3, HexOut4, HexOut5, HexOut6);
+	input        IdOk, PswdOk;
+	input  [2:0] Mode;
+	output [6:0] HexOut1, HexOut2, HexOut3, HexOut4, HexOut5, HexOut6;
+	reg    [4:0] DecoderOneInput, DecoderTwoInput, DecoderThreeInput, DecoderFourInput, DecoderFiveInput, DecoderSixInput;
+	wire   [6:0] HexOut1Holder, HexOut2Holder, HexOut3Holder, HexOut4Holder, HexOut5Holder, HexOut6Holder;
+
+// ----------------------------------------------------------------------------- Instantiation Block ---------------------------------------------------------
+
+	LetterSevenSegDecoder DecoderOne(DecoderOneInput, HexOut1Holder);
+	LetterSevenSegDecoder DecoderTwo(DecoderTwoInput, HexOut2Holder);
+	LetterSevenSegDecoder DecoderThree(DecoderThreeInput, HexOut3Holder);
+	LetterSevenSegDecoder DecoderFour(DecoderFourInput, HexOut4Holder);
+	LetterSevenSegDecoder DecoderFive(DecoderFiveInput, HexOut5Holder);
+	LetterSevenSegDecoder DecoderSix(DecoderSixInput, HexOut6Holder);
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------ Always Block ----------------------------------------------------------------
+	always@(IdOk, PswdOk, InternalID, Mode)
+		begin
+// The format will look a bit weird here because it adhock code essentially. The top if/else was added after the inner conditionals
+			if(Mode == 3'b011)
+				begin
+					DecoderOneInput   =   5'b10001; // S
+					DecoderTwoInput   =   5'b10011; // U
+					DecoderThreeInput =   5'b00011; // C
+					DecoderFourInput  =   5'b00011; // C
+					DecoderFiveInput  =   5'b00000;
+					DecoderSixInput   =   5'b00000;
+				end
+			else if(Mode == 3'b100)
+				begin
+					DecoderOneInput   =   5'b00110; // F
+					DecoderTwoInput   =   5'b00001; // A
+					DecoderThreeInput =   5'b01001; // I
+					DecoderFourInput  =   5'b01011; // L
+					DecoderFiveInput  =   5'b00000;
+					DecoderSixInput   =   5'b00000;
+				end
+			else
+				begin
+					if(IdOk == 1'b0)
+						begin
+							DecoderOneInput   =   5'b00000;
+							DecoderTwoInput   =   5'b00000;
+							DecoderThreeInput =   5'b01001; // I
+							DecoderFourInput  =   5'b00100; // D
+							DecoderFiveInput  =   5'b00000;
+							DecoderSixInput   =   5'b00000;
+						end
+					else if((PswdOk == 1'b0) && (IdOk == 1'b1))
+						begin
+							DecoderOneInput   =   5'b00000;
+							DecoderTwoInput   =   5'b01110; // P
+							DecoderThreeInput =   5'b10001; // S
+							DecoderFourInput  =   5'b00011; // C
+							DecoderFiveInput  =   5'b01101; // O
+							DecoderSixInput   =   5'b00000;
+						end
+
+					else
+						begin
+							DecoderOneInput = 5'b00000;
+							DecoderTwoInput = 5'b00000;
+							DecoderThreeInput = 5'b00000;
+							DecoderFourInput = 5'b00000;
+							DecoderFiveInput = 5'b00000;
+							DecoderSixInput = 5'b00000;
+						end
+				end
+		end
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------- Assigning Block ------------------------------------------------------------
+	assign HexOut1 = HexOut1Holder;
+	assign HexOut2 = HexOut2Holder;
+	assign HexOut3 = HexOut3Holder;
+	assign HexOut4 = HexOut4Holder;
+	assign HexOut5 = HexOut5Holder;
+	assign HexOut6 = HexOut6Holder;
+endmodule

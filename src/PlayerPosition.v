@@ -1,0 +1,49 @@
+// Author: Matthew Andersen 2071
+// PlayerPosition.v
+// Sets and toggles the player position based on a single pulse input
+// Default is TOP position.
+
+module PlayerPosition(PlayerToggle, PlayerPosition, clk, rst);
+  
+  input PlayerToggle, clk, rst;
+  output [6:0] PlayerPosition;
+
+  reg [6:0]PlayerPosition;
+  reg [1:0] State;
+
+  parameter INIT = 0, TOP = 1, BOTTOM = 2;
+
+  always@(posedge clk) begin
+    if (rst == 1'b0) begin
+      PlayerPosition <= 7'b1111111;
+      State <= INIT;
+    end
+    else begin
+      case(State)
+        INIT: begin
+          PlayerPosition <= 7'b1111111;
+          State <= TOP;
+        end
+
+        TOP: begin
+          PlayerPosition <= 7'b0011100;
+          if (PlayerToggle == 1'b1) begin
+            State <= BOTTOM;
+          end
+        end
+
+        BOTTOM: begin
+          PlayerPosition <= 7'b0100011;
+          if (PlayerToggle == 1'b1) begin
+            State <= TOP;
+          end
+        end
+        
+        default: begin
+          State <= INIT;
+        end
+
+      endcase
+    end
+  end
+endmodule

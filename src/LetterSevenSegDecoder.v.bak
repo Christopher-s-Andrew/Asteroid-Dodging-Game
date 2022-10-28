@@ -1,0 +1,52 @@
+/*
+Course Number: 5440
+Author: Gantabya Kadel, 8522
+Module Name: LetterSevenSegDecoder
+Description: Custom Letter Seven Segment Decoder Module. Module created for Team Q4's Advanced Digital Design Final Project.
+	     A-Z letters covered. Exculed Letters are K, M, V, W, X, Z
+	     Also includes number symbols 1 - 9
+ Comments: Made to display letter for User Authentication
+*/
+module LetterSevenSegDecoder(DecoderInput, DecoderOutput);
+	input[4:0] DecoderInput;
+	output[6:0] DecoderOutput;
+	reg[6:0] DecoderOutput;
+
+	always@(DecoderInput)
+		begin
+			case(DecoderInput)
+				5'b00000: begin DecoderOutput = 7'b1111111; end
+				5'b00001: begin DecoderOutput = 7'b0001001; end
+				5'b00010: begin DecoderOutput = 7'b0000011; end
+				5'b00011: begin DecoderOutput = 7'b1000110; end
+				5'b00100: begin DecoderOutput = 7'b0100001; end
+				5'b00101: begin DecoderOutput = 7'b0000110; end
+				5'b00110: begin DecoderOutput = 7'b0001110; end
+				5'b00111: begin DecoderOutput = 7'b0010000; end
+				5'b01000: begin DecoderOutput = 7'b0001001; end
+				5'b01001: begin DecoderOutput = 7'b1111001; end
+				5'b01010: begin DecoderOutput = 7'b1110000; end
+				5'b01011: begin DecoderOutput = 7'b1000111; end
+				5'b01100: begin DecoderOutput = 7'b1001000; end
+				5'b01101: begin DecoderOutput = 7'b1000000; end
+				5'b01110: begin DecoderOutput = 7'b0001100; end
+				5'b01111: begin DecoderOutput = 7'b0011000; end
+				5'b10000: begin DecoderOutput = 7'b0101111; end
+				5'b10001: begin DecoderOutput = 7'b0010010; end
+				5'b10010: begin DecoderOutput = 7'b0000111; end
+				5'b10011: begin DecoderOutput = 7'b1000001; end
+				5'b10100: begin DecoderOutput = 7'b0011001; end
+			// Number symbols below
+				5'b10101: begin DecoderOutput = 7'b1111001; end
+				5'b10110: begin DecoderOutput = 7'b0100100; end
+				5'b10111: begin DecoderOutput = 7'b0110000; end
+				5'b11000: begin DecoderOutput = 7'b0011001; end
+				5'b11001: begin DecoderOutput = 7'b0010010; end
+				5'b11010: begin DecoderOutput = 7'b0000010; end
+				5'b11011: begin DecoderOutput = 7'b1111000; end
+				5'b11100: begin DecoderOutput = 7'b0000000; end
+				5'b11101: begin DecoderOutput = 7'b0011000; end
+				default: begin DecoderOutput = 7'b1111111;  end
+			endcase
+		end
+endmodule

@@ -1,0 +1,208 @@
+/*
+Course Number: 5440
+Author: Gantabya Kadel, 8522
+Module Name: CheckPswd
+Description: Verilog implementation of Multi User Authentication process. Module created for Team Q4's Advanced Digital Design Final Project to validate user's password inputs.
+	     Guest users have a unique id and password as well. IDs are 4 bits and Passwords are 6 bits. IDs and Passwords are in HEX.
+ Comments: Made with help, mainly from Lecture, from Dr. Chen. The IDs of each indidivual partner are the last 4 Digits of their ID numbers.
+		Team Member 1: Gantabya Kadel         ===> ID: 8522  Password: A54E32
+		Team Member 2: Nhat Nguyen    	      ===> ID: 4700  Password: EEE420
+		Team Member 3: Christopher Andrew     ===> ID: 5928  Password: F24630
+		Team Member 4: Matthew Anderson	      ===> ID: 2071  Password: AAB431
+		Guest				      ===> ID: FFFF  Password: FFFFFF
+*/
+module CheckPswd(Clk, Reset, EnterPswd, BeginCheck, InputSwitches, LogOutPulse, InternalID, Authenticated);
+	input Clk, Reset, EnterPswd, BeginCheck, LogOutPulse;
+	input [4:0] InternalID;
+	input [3:0] InputSwitches;
+	output Authenticated;
+	reg Authenticated, Match;
+	reg [2:0] DigCounter, AddrCounter;
+	reg [1:0] DelayCounter;
+	reg [4:0] Address;
+	reg [23:0] UserEnteredPswd, ROMQValue;
+	reg [3:0] State;
+	parameter WaitToStart = 0, GetDig = 1, FetchROM = 2, DelayWait = 3, AssignROM = 4, Compare = 5, Verify = 6, Passed = 7; 
+	wire [23:0] FetchedQ;
+
+// Instansiate the ROM 
+
+	UserPswds ROM_Pswds(Address, Clk, FetchedQ);
+
+//
+	always@(posedge Clk)
+		begin
+			if(Reset == 1'b0)
+				begin
+					Authenticated   	<=   1'b0;
+					Match           	<=   1'b0;
+					DigCounter      	<=   3'b000;
+					AddrCounter    	 	<=   3'b000;
+					DelayCounter    	<=   2'b10;
+					Address         	<=   5'b00000;
+					UserEnteredPswd 	<= 24'b000000000000000000000000;
+					ROMQValue       	<= 24'b000000000000000000000000;
+					State	        	<=   WaitToStart;
+					
+				end
+			else
+				begin
+					case(State)
+						WaitToStart:
+							begin
+								Authenticated   	<=   1'b0;
+								Match           	<=   1'b0;
+								DigCounter      	<=   3'b000;
+								AddrCounter    	 	<=   3'b000;
+								DelayCounter    	<=   2'b10;
+								Address         	<=   5'b00000;
+								UserEnteredPswd 	<= 24'b000000000000000000000000;
+								ROMQValue       	<= 24'b000000000000000000000000;
+//
+								if(BeginCheck == 1'b1)
+									begin
+										State <= GetDig;			
+									end
+								else
+									begin
+										State <= WaitToStart;
+									end
+							end
+						GetDig:
+							begin
+								if(DigCounter == 3'b110)
+									begin
+										DigCounter <= 3'b000;
+										State <= FetchROM;
+									end
+								else
+									begin
+										if(EnterPswd == 1'b1)
+											begin
+												if(DigCounter == 3'b000)
+													begin
+														UserEnteredPswd[23:20] <= InputSwitches;		
+														DigCounter <= DigCounter + 1;
+														State <= GetDig;
+													end
+												else if(DigCounter == 3'b001)
+													begin
+														UserEnteredPswd[19:16] <= InputSwitches;
+														DigCounter <= DigCounter + 1;
+														State <= GetDig;
+													end
+												else if(DigCounter == 3'b010)
+													begin
+														UserEnteredPswd[15:12] <= InputSwitches;
+														DigCounter <= DigCounter + 1;
+														State <= GetDig;
+													end
+												else if(DigCounter == 3'b011)
+													begin
+														UserEnteredPswd[11:8] <= InputSwitches;
+														DigCounter <= DigCounter + 1;
+														State <= GetDig;
+													end
+												else if(DigCounter == 3'b100)
+													begin
+														UserEnteredPswd[7:4] <= InputSwitches;
+														DigCounter <= DigCounter + 1;
+														State <= GetDig;
+													end
+												else if(DigCounter == 3'b101)
+													begin
+														UserEnteredPswd[3:0] <= InputSwitches;
+														DigCounter <= DigCounter + 1;
+														State <= GetDig;
+													end
+												else
+													begin
+														State <= GetDig;
+													end
+											end
+										State <= GetDig; // if btn not pressed.
+									end
+							end
+						FetchROM:
+							begin
+								Address <= {2'b00, AddrCounter}; 
+								State <= DelayWait;
+							end
+						DelayWait:
+							begin
+								if(DelayCounter == 2'b00)
+									begin
+										DelayCounter <= 2'b10;
+										State <= AssignROM;
+									end
+								else
+									begin
+										DelayCounter <= DelayCounter - 1;
+										State <= DelayWait;
+									end
+							end
+						AssignROM:
+							begin
+								ROMQValue <= FetchedQ;
+								State <= Compare;			
+							end
+						Compare:
+							begin
+								if(UserEnteredPswd == ROMQValue)
+									begin
+										Match <= 1'b1;
+									end
+								else
+									begin
+										Match <= 1'b0;
+									end
+								State <= Verify;
+							end
+						Verify:
+							begin
+//
+								if(Match == 1'b1 && (InternalID == Address)) // the Internal ID must match the address of the matched passcode so that the passcode verified belongs to the correct user id.
+									begin
+										State <= Passed;
+									end
+								else
+									begin
+										AddrCounter <= AddrCounter + 1;
+										if(AddrCounter == 3'b110)
+											begin
+												AddrCounter <= 3'b000;
+												State <= WaitToStart; // To ensure that if address >= 6 then there is definelty no match and now go back to initial and start over.
+											end
+										else
+											begin
+												//if()
+												State <= FetchROM;
+											end
+									end
+							end
+						Passed:
+							begin
+// Check For Log Out ... Only checking in this state because you cannot "log out" before logging in ... 
+// The fact that the user can press the logout button and generate an output means that they have logged in and THEN decided to press the button .... which means the first time around Passed state did send the Authenticated signal as an active high outside.
+//
+								Authenticated <= 1'b1;
+								if(LogOutPulse == 1'b1)
+									begin
+										State <= WaitToStart;
+										Authenticated <= 1'b0;
+									end
+								else
+									begin
+										State <= Passed;						
+									end
+							end
+						default:
+							begin
+								State <= WaitToStart;
+							end
+					endcase
+				end
+		end
+
+
+endmodule

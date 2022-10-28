@@ -1,0 +1,45 @@
+/*
+Course Number: 5440
+Author: Gantabya Kadel, 8522
+Module Name: MultiUserAuthentication
+Description: Top Level module for the verilog implementation of Multi User Authentication process. Module created for Team Q4's Advanced Digital Design Final Project. Requires User's ID then password for scuessful authnetication.
+	     Guest users have a unique id and password as well. IDs are 4 bits and Passwords are 6 bits. IDs and Passwords are in HEX.
+ Comments: Made with help, mainly from Lecture, from Dr. Chen. The IDs of each indidivual partner are the last 4 Digits of their ID numbers.
+		Team Member 1: Gantabya Kadel         ===> ID: 8522  Password: A54E32
+		Team Member 2: Nhat Nguyen    	      ===> ID: 4700  Password: EEE420
+		Team Member 3: Christopher Andrew     ===> ID: 5928  Password: F24630
+		Team Member 4: Matthew Anderson	      ===> ID: 2071  Password: AAB431
+*/
+module MultiUserAuthentication(Clk, Reset, InputSwitches, EnterPswd, LogOutPulse, Mode, Successful, PlayerID, SevenSegOut1, SevenSegOut2, SevenSegOut3, SevenSegOut4, SevenSegOut5, SevenSegOut6);
+	input Clk, Reset, EnterPswd, LogOutPulse;
+	input [2:0] Mode;
+	input [3:0] InputSwitches; // Will be used for the input of both Ids and passwords. 6-bits can take care of 4-bit inputs so there's no need to have 2 sets of switches
+	output Successful;
+	output [4:0] PlayerID;
+	output [6:0] SevenSegOut1, SevenSegOut2, SevenSegOut3, SevenSegOut4, SevenSegOut5, SevenSegOut6; // To output some msg to display while logging in
+	wire SuccessSignal, IDVerified;
+	wire [4:0] InternalID;
+	wire [6:0] Out1Holder, Out2Holder, Out3Holder, Out4Holder, Out5Holder, Out6Holder;
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------- Instantiation Block -----------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	// CheckID(Clk, Reset, InputSwitches, EnterPswd, LogOutPulse, IDOK, InternalID)
+	CheckID IdVerification(Clk, Reset, InputSwitches, EnterPswd, LogOutPulse, IDVerified, InternalID);
+	// CheckPswd(Clk, Reset, EnterPswd, BeginCheck, InputSwitches, LogOutPulse, InternalID, Authenticated)
+	CheckPswd PswdVerification(Clk, Reset, EnterPswd, IDVerified,InputSwitches, LogOutPulse, InternalID, SuccessSignal);
+	// Display(IdOk, PswdOk, InternalID, Mode, HexOut1, HexOut2, HexOut3, HexOut4, HexOut5, HexOut6
+	Display HEXDisplay(IDVerified, SuccessSignal, Mode, Out1Holder, Out2Holder, Out3Holder, Out4Holder, Out5Holder, Out6Holder);
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------- Assigning Block --------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	assign Successful	= SuccessSignal;
+	assign PlayerID		= InternalID;
+	assign SevenSegOut1	= Out1Holder;
+	assign SevenSegOut2	= Out2Holder;
+	assign SevenSegOut3 	= Out3Holder;
+	assign SevenSegOut4 	= Out4Holder;
+	assign SevenSegOut5 	= Out5Holder;
+	assign SevenSegOut6 	= Out6Holder;
+
+endmodule
