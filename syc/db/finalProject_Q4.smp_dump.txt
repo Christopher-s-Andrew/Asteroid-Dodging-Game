@@ -1,0 +1,90 @@
+
+State Machine - |finalProject_Q4|Score_Control_Unit:Scorer|Score_Tracker:score_Unit|state
+Name state.CLEANUP state.CHECK_GLOBAL_BEST state.UPDATE_PB state.CHECK_PB state.CATCH state.RAM_CYCLE_2 state.RAM_CYCLE_1 state.FETCH state.WAIT_FOR_SCORE state.RAM_INIT 
+state.RAM_INIT 0 0 0 0 0 0 0 0 0 0 
+state.WAIT_FOR_SCORE 0 0 0 0 0 0 0 0 1 1 
+state.FETCH 0 0 0 0 0 0 0 1 0 1 
+state.RAM_CYCLE_1 0 0 0 0 0 0 1 0 0 1 
+state.RAM_CYCLE_2 0 0 0 0 0 1 0 0 0 1 
+state.CATCH 0 0 0 0 1 0 0 0 0 1 
+state.CHECK_PB 0 0 0 1 0 0 0 0 0 1 
+state.UPDATE_PB 0 0 1 0 0 0 0 0 0 1 
+state.CHECK_GLOBAL_BEST 0 1 0 0 0 0 0 0 0 1 
+state.CLEANUP 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |finalProject_Q4|PlayerPosition:PlayerPos|State
+Name State.INIT State.BOTTOM State.TOP 
+State.INIT 0 0 0 
+State.TOP 1 0 1 
+State.BOTTOM 1 1 0 
+
+State Machine - |finalProject_Q4|CrashDetector:Crashed|State
+Name State.NOCRASH State.WAIT State.CRASH 
+State.NOCRASH 0 0 0 
+State.CRASH 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |finalProject_Q4|ObjectShifter:ShiftObj|State
+Name State.WAIT State.SENDSHAPE State.GETRNG State.INIT 
+State.INIT 0 0 0 0 
+State.GETRNG 0 0 1 1 
+State.SENDSHAPE 0 1 0 1 
+State.WAIT 1 0 0 1 
+
+State Machine - |finalProject_Q4|LED_Animator:LEDDisplay|State
+Name State.INIT State.GBEST State.PBEST 
+State.INIT 0 0 0 
+State.PBEST 1 0 1 
+State.GBEST 1 1 0 
+
+State Machine - |finalProject_Q4|AccessController:MultiAuthGameCtrl|GameController:GameControl|State
+Name State.WAIT_FOR_LOG_OUT State.GamePlay State.Fail State.Pass State.PerScoreDisp State.GblScoreDisp State.WaitForAuthentication 
+State.WaitForAuthentication 0 0 0 0 0 0 0 
+State.GblScoreDisp 0 0 0 0 0 1 1 
+State.PerScoreDisp 0 0 0 0 1 0 1 
+State.Pass 0 0 0 1 0 0 1 
+State.Fail 0 0 1 0 0 0 1 
+State.GamePlay 0 1 0 0 0 0 1 
+State.WAIT_FOR_LOG_OUT 1 0 0 0 0 0 1 
+
+State Machine - |finalProject_Q4|AccessController:MultiAuthGameCtrl|MultiUserAuthentication:Multi_Authen|CheckPswd:PswdVerification|State
+Name State.Passed State.Verify State.Compare State.AssignROM State.DelayWait State.FetchROM State.GetDig State.WaitToStart 
+State.WaitToStart 0 0 0 0 0 0 0 0 
+State.GetDig 0 0 0 0 0 0 1 1 
+State.FetchROM 0 0 0 0 0 1 0 1 
+State.DelayWait 0 0 0 0 1 0 0 1 
+State.AssignROM 0 0 0 1 0 0 0 1 
+State.Compare 0 0 1 0 0 0 0 1 
+State.Verify 0 1 0 0 0 0 0 1 
+State.Passed 1 0 0 0 0 0 0 1 
+
+State Machine - |finalProject_Q4|AccessController:MultiAuthGameCtrl|MultiUserAuthentication:Multi_Authen|CheckID:IdVerification|State
+Name State.Success State.Verify State.Compare State.CatchROM State.Wait State.FetchROM State.DigFour State.DigThree State.DigTwo State.DigOne 
+State.DigOne 0 0 0 0 0 0 0 0 0 0 
+State.DigTwo 0 0 0 0 0 0 0 0 1 1 
+State.DigThree 0 0 0 0 0 0 0 1 0 1 
+State.DigFour 0 0 0 0 0 0 1 0 0 1 
+State.FetchROM 0 0 0 0 0 1 0 0 0 1 
+State.Wait 0 0 0 0 1 0 0 0 0 1 
+State.CatchROM 0 0 0 1 0 0 0 0 0 1 
+State.Compare 0 0 1 0 0 0 0 0 0 1 
+State.Verify 0 1 0 0 0 0 0 0 0 1 
+State.Success 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |finalProject_Q4|ButtonShaper:LogOutButton|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |finalProject_Q4|ButtonShaper:PWEnterButton|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |finalProject_Q4|ButtonShaper:GameStartButton|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 

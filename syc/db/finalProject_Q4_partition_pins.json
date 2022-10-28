@@ -1,0 +1,269 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "TenLEDOutput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[8]",
+					"strict" : false
+				},
+				{
+					"name" : "TenLEDOutput[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[20]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[21]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[22]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[23]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[24]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[25]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[26]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[27]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[28]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[29]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[30]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[31]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[32]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[33]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[34]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[35]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[36]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[37]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[38]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[39]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[40]",
+					"strict" : false
+				},
+				{
+					"name" : "SevenSegDisplay[41]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "GameLengthSwitches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "GameLengthSwitches[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GameLengthSwitches[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GameLengthSwitches[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LogOutRawBtn",
+					"strict" : false
+				},
+				{
+					"name" : "GameStartRawBtn",
+					"strict" : false
+				},
+				{
+					"name" : "PswdEnterRawBtn",
+					"strict" : false
+				},
+				{
+					"name" : "PWSwitches[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PWSwitches[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PWSwitches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PWSwitches[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
