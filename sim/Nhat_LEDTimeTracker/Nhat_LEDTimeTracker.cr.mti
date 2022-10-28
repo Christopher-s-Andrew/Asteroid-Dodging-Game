@@ -1,0 +1,36 @@
+C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/OneSecondTimer.v {1 {vlog -work work -stats=none C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/OneSecondTimer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module OneSecondTimer
+
+Top level modules:
+	OneSecondTimer
+
+} {} {}} C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/testbench_Nhat_LEDBarTimer.v {1 {vlog -work work -stats=none C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/testbench_Nhat_LEDBarTimer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testbench_LEDBarTimer
+
+Top level modules:
+	testbench_LEDBarTimer
+
+} {} {}} C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/Nhat_LEDBarTimer.v {1 {vlog -work work -stats=none C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/Nhat_LEDBarTimer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Nhat_LEDBarTimer
+
+Top level modules:
+	Nhat_LEDBarTimer
+
+} {} {}} C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/Nhat_LEDTimeTracker.v {1 {vlog -work work -stats=none C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/Nhat_LEDTimeTracker.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Nhat_LEDTimeTracker
+
+Top level modules:
+	Nhat_LEDTimeTracker
+
+} {} {}} C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/Nhat_LEDBarDecoder.v {1 {vlog -work work -stats=none C:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker/Nhat_LEDBarDecoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Nhat_LEDBarDecoder
+
+Top level modules:
+	Nhat_LEDBarDecoder
+
+} {} {}}

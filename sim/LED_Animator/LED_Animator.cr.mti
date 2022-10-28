@@ -1,0 +1,36 @@
+C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_1ms.v {1 {vlog -work work -stats=none C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_1ms.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Timer_1ms
+
+Top level modules:
+	Timer_1ms
+
+} {} {}} C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_100ms.v {1 {vlog -work work -stats=none C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_100ms.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Timer_100ms
+
+Top level modules:
+	Timer_100ms
+
+} {} {}} C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/testbench_LED_Animator.v {1 {vlog -work work -stats=none C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/testbench_LED_Animator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testbench_LED_Animator
+
+Top level modules:
+	testbench_LED_Animator
+
+} {} {}} C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/VariableTimer.v {1 {vlog -work work -stats=none C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/VariableTimer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Variable_Timer
+
+Top level modules:
+	Variable_Timer
+
+} {} {}} C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/LED_Animator.v {1 {vlog -work work -stats=none C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/LED_Animator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LED_Animator
+
+Top level modules:
+	LED_Animator
+
+} {} {}}

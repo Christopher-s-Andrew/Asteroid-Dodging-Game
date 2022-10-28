@@ -1,0 +1,155 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ADD_Demos/Lab4_NGUYEN_Nhat/sim_1mslfsr
+vNhat_LEDBarDecoder
+Z0 !s110 1651783270
+!i10b 1
+!s100 Z0JRNK;HY=QAzB[Zak4SZ2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IIR;b1Rn088Ri1>:WYf<B11
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut
+w1651783267
+8C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDBarDecoder.v
+FC:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDBarDecoder.v
+!i122 10
+L0 1 23
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1651783270.000000
+!s107 C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDBarDecoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDBarDecoder.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@nhat_@l@e@d@bar@decoder
+vNhat_LEDBarTimer
+R0
+!i10b 1
+!s100 6YMLZfIjUW?dFP`]94PoB2
+R1
+I8PHDQei>QJjmG6^<?Yzla1
+R2
+R3
+w1651783166
+8C:\ADD_Demos\FinalProject_NGUYEN_Nhat\sim_ledOut\Nhat_LEDBarTimer.v
+FC:\ADD_Demos\FinalProject_NGUYEN_Nhat\sim_ledOut\Nhat_LEDBarTimer.v
+!i122 9
+L0 9 14
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\ADD_Demos\FinalProject_NGUYEN_Nhat\sim_ledOut\Nhat_LEDBarTimer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\ADD_Demos\FinalProject_NGUYEN_Nhat\sim_ledOut\Nhat_LEDBarTimer.v|
+!i113 1
+R6
+R7
+n@nhat_@l@e@d@bar@timer
+vNhat_LEDTimeTracker
+R0
+!i10b 1
+!s100 XRK_0V1G7de8V:7Q0?Ym:1
+R1
+IXmIR@BgG7h77PSQV0BKhI2
+R2
+R3
+w1651783084
+8C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDTimeTracker.v
+FC:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDTimeTracker.v
+!i122 11
+L0 1 52
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDTimeTracker.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDTimeTracker.v|
+!i113 1
+R6
+R7
+n@nhat_@l@e@d@time@tracker
+vOneSecondTimer
+R0
+!i10b 1
+!s100 f2YLbG=ZF>8?<=oKC<i160
+R1
+Izh6AzDnGD?[^^06c<5oCX0
+R2
+R3
+w1648609736
+8C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/OneSecondTimer.v
+FC:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/OneSecondTimer.v
+!i122 12
+Z8 L0 1 31
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/OneSecondTimer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/OneSecondTimer.v|
+!i113 1
+R6
+R7
+n@one@second@timer
+vTimer100ms
+!s110 1651783271
+!i10b 1
+!s100 J_=?UX8J7_Z8F]ZbhkPQ^2
+R1
+I;ogRSmO:l9zRd0dHMEjF62
+R2
+R3
+w1649391861
+8C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer100ms.v
+FC:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer100ms.v
+!i122 14
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer100ms.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer100ms.v|
+!i113 1
+R6
+R7
+n@timer100ms
+vTimer1msLFSR
+R0
+!i10b 1
+!s100 M2?X;dd4T:^mzRm;>ojj>2
+R1
+IA6R9153_Nc8SdMObkn@`Q0
+R2
+R3
+w1648827325
+8C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer1msLFSR.v
+FC:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer1msLFSR.v
+!i122 13
+L0 13 24
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer1msLFSR.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer1msLFSR.v|
+!i113 1
+R6
+R7
+n@timer1ms@l@f@s@r

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ADD_Demos/Lab4_ANDERSEN_Matthew/sim_RNG_LFSR
+vDecoder_3bTo7bShape
+Z0 !s110 1651608468
+!i10b 1
+!s100 2k46XYB]7CknR5nFPW[_D3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iz6XS0n;1V0CojdEohi>1:0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape
+w1651608464
+8C:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape/Decoder_3bTo7bShape.v
+FC:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape/Decoder_3bTo7bShape.v
+!i122 1
+L0 7 20
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1651608468.000000
+!s107 C:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape/Decoder_3bTo7bShape.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape/Decoder_3bTo7bShape.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@decoder_3b@to7b@shape
+vtestbench_Decoder_3bTo7bShape
+R0
+!i10b 1
+!s100 N_JBNonXoQna1k]>AIB>_2
+R1
+ILagR0F1Pe76b<K:H=<EOM0
+R2
+R3
+w1651608389
+8C:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape/testbench_Decoder_3bTo7bShape.v
+FC:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape/testbench_Decoder_3bTo7bShape.v
+!i122 2
+L0 7 18
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape/testbench_Decoder_3bTo7bShape.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Demos/ADDFINALPROJ/sim/Decoder_3bTo7bShape/testbench_Decoder_3bTo7bShape.v|
+!i113 1
+R6
+R7
+ntestbench_@decoder_3b@to7b@shape

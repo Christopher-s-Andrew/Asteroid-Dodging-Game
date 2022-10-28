@@ -1,0 +1,43 @@
+C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer100ms.v {1 {vlog -work work -stats=none C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer100ms.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Timer100ms
+
+Top level modules:
+	Timer100ms
+
+} {} {}} C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDTimeTracker.v {1 {vlog -work work -stats=none C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDTimeTracker.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Nhat_LEDTimeTracker
+
+Top level modules:
+	Nhat_LEDTimeTracker
+
+} {} {}} C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDBarDecoder.v {1 {vlog -work work -stats=none C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDBarDecoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Nhat_LEDBarDecoder
+
+Top level modules:
+	Nhat_LEDBarDecoder
+
+} {} {}} C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/OneSecondTimer.v {1 {vlog -work work -stats=none C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/OneSecondTimer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module OneSecondTimer
+
+Top level modules:
+	OneSecondTimer
+
+} {} {}} C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer1msLFSR.v {1 {vlog -work work -stats=none C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Timer1msLFSR.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Timer1msLFSR
+
+Top level modules:
+	Timer1msLFSR
+
+} {} {}} C:/ADD_Demos/FinalProject_NGUYEN_Nhat/sim_ledOut/Nhat_LEDBarTimer.v {1 {vlog -work work -stats=none {C:\ADD_Demos\FinalProject_NGUYEN_Nhat\sim_ledOut\Nhat_LEDBarTimer.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Nhat_LEDBarTimer
+
+Top level modules:
+	Nhat_LEDBarTimer
+
+} {} {}}

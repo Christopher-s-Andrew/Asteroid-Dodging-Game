@@ -1,0 +1,15 @@
+C:/ADD_Demos/ADDFINALPROJ/sim/CrashDetector/testbench_CrashDetector.v {1 {vlog -work work -stats=none C:/ADD_Demos/ADDFINALPROJ/sim/CrashDetector/testbench_CrashDetector.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testbench_CrashDetector
+
+Top level modules:
+	testbench_CrashDetector
+
+} {} {}} C:/ADD_Demos/ADDFINALPROJ/sim/CrashDetector/CrashDetector.v {1 {vlog -work work -stats=none C:/ADD_Demos/ADDFINALPROJ/sim/CrashDetector/CrashDetector.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module CrashDetector
+
+Top level modules:
+	CrashDetector
+
+} {} {}}

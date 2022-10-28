@@ -1,0 +1,131 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ADD_Demos/ADDFINALPROJ/sim/Nhat_LEDTimeTracker
+vLED_Animator
+Z0 !s110 1652043993
+!i10b 1
+!s100 PMPIRb:[]YeRUaOMC6VHg1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I;@7;`R2Kn_YmTRfbiAJba3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator
+w1652043987
+8C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/LED_Animator.v
+FC:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/LED_Animator.v
+!i122 55
+L0 6 108
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1652043993.000000
+!s107 C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/LED_Animator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/LED_Animator.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@l@e@d_@animator
+vtestbench_LED_Animator
+R0
+!i10b 1
+!s100 IFLT7KCE0R1`Ko4QWjNe72
+R1
+IHTR[XUAV1<8JeU=TIbUEH3
+R2
+R3
+w1652042276
+8C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/testbench_LED_Animator.v
+FC:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/testbench_LED_Animator.v
+!i122 56
+L0 6 31
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/testbench_LED_Animator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/testbench_LED_Animator.v|
+!i113 1
+R6
+R7
+ntestbench_@l@e@d_@animator
+vTimer_100ms
+R0
+!i10b 1
+!s100 ORB>@SI8bXYDHId?<b7aS1
+R1
+IQo>Fz>JLO2dBkB7cj6[PR2
+R2
+R3
+Z8 w1651963443
+8C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_100ms.v
+FC:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_100ms.v
+!i122 58
+L0 5 44
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_100ms.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_100ms.v|
+!i113 1
+R6
+R7
+n@timer_100ms
+vTimer_1ms
+R0
+!i10b 1
+!s100 f>Dfl8NNcWCff0IcdM8gP1
+R1
+IQV[EE2OlEZGCL?1>g_S630
+R2
+R3
+R8
+8C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_1ms.v
+FC:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_1ms.v
+!i122 57
+L0 5 56
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_1ms.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/Timer_1ms.v|
+!i113 1
+R6
+R7
+n@timer_1ms
+vVariable_Timer
+R0
+!i10b 1
+!s100 1Dzn@M78bf;oBn>lmW=OZ1
+R1
+IIjzn4XIYin6lJVMDHQZaL3
+R2
+R3
+R8
+8C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/VariableTimer.v
+FC:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/VariableTimer.v
+!i122 59
+L0 7 48
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/VariableTimer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/LED_Animator/VariableTimer.v|
+!i113 1
+R6
+R7
+n@variable_@timer
