@@ -1,0 +1,49 @@
+//class: ECE 5440
+//author: Christopher Andrew
+//Purpose: this module tests the 1 second cascacaded timer.
+
+
+`timescale 1 ns/100ps
+
+module Testbench_Variable_Timer();
+	reg clock_S, reset_S, enable_S;
+	wire time_Out_S;
+	reg [3:0] Speed;
+	//module instance
+	Variable_Timer DUT_Variable_Timer(clock_S,reset_S,enable_S,time_Out_S, Speed);
+	
+	//clock generation 50 [MHz]
+	always
+	begin
+		clock_S = 1'b0;
+		#10 clock_S = 1'b1;
+		#10;
+	end
+	
+	//testing
+	initial
+	begin
+		reset_S = 1;
+		enable_S = 0;
+		//lots of clock pulses
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		#5 reset_S = 0;
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		@(posedge clock_S);
+		#5 reset_S = 1;
+		@(posedge clock_S);
+		#5 Speed = 2; //edit me to test speed modes
+		@(posedge clock_S);
+		#5 enable_S = 1;
+	end
+endmodule

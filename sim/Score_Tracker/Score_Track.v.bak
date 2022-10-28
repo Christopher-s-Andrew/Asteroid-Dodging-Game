@@ -1,0 +1,178 @@
+//Author: Christopher Andrew
+//Course: ECE 5440
+//Purpose: The purpose of this module is to read/write the player score to RAM and to determin the
+				//the best score your personal best, and what type of score this is
+				
+				
+module Score_Tracker(clock, reset, score_Request, PID, score, valid, new_PB, new_GB, 
+	address, score_Write, R_W, score_Read, best_Score_O, best_PID_O, pB_O, final_Score);
+
+	input clock, reset; //synch signal and module reset
+	input score_Request; //score_Request, game is over so start score processing
+	input [4:0] PID;	//player ID
+	input [7:0] score;	//current players score
+	input [7:0] score_Read; //the score being read from ram
+	
+	
+	output valid; //signal to let game controller know that score processing has finished
+	output new_PB;	//the player beat their previous best 
+	output new_GB;	//the player beat the all time best score
+	output [4:0] address; //the address of the score to be read from memory
+	output score_Write [7:0]; //the score to write to RAM
+	output R_W; //whether to read or write to RAM, 0 == read, 1 == write
+	output [7:0] best_Score_O; //global best score
+	output [4:0] best_PID_O; //best ID
+	output [7:0] pB_O; //best score of the current logged in player
+	output [7:0] final_Score;	
+	
+	//register outputs
+	reg valid; //signal to let game controller know that score processing has finished
+	reg new_PB;	//the player beat their previous best 
+	reg new_GB;	//the player beat the all time best score
+	reg [4:0] address; //the address of the score to be read from memory
+	reg [7:0] score_Write; //the score to write to RAM
+	reg R_W; //whether to read or write to RAM
+	
+	//other outputs
+	reg [7:0] best_Score_O; //global best score
+	reg [4:0] best_PID_O; //best ID
+	reg [7:0] pB_O; //best score of the current logged in player
+	reg [7:0] final_Score;
+
+	//state machine setup
+	parameter RAM_INIT = 0, WAIT_FOR_SCORE = 1, FETCH = 2, RAM_CYCLE_1 = 3, RAM_CYCLE_2 = 4, CATCH = 5, CHECK_PB = 6, UPDATE_PB = 7, CHECK_GLOBAL_BEST = 8, CLEANUP = 9;//states
+	reg [3:0] state;
+	
+	//internal storage buffering
+	reg [7:0] catch_RAM;	//temp storage of the player score that is read from RAM
+	reg [7:0] global_Best_Score; //the global best scoring player
+	reg [4:0] best_Player;	//the player number of the best scoring player
+	reg [7:0] i_Final_Score; //player score when score comparison starts
+	
+	//assignment for output maping
+	//assign best_Score_O = global_Best_Score;
+	//assign best_PID = best_Player;
+	//assign pB_O = catch_RAM;
+	//assign final_Score = i_Final_Score;
+
+	always@(posedge clock)
+	begin
+		if(reset == 1'b0) //active low reset
+		begin
+			valid <= 0;
+			global_Best_Score <= 0;
+			new_PB <= 0;
+			new_GB <= 0;
+			address <= 0;
+			score_Write <= 0;
+			R_W <= 0;
+			state <= RAM_INIT;
+
+			catch_RAM <= 0;
+			i_Final_Score <= 0;
+			best_Player <= 0;
+			best_PID_O <= 0;
+			best_Score_O <= 0;
+			pB_O <= 0;
+			final_Score <= 0;
+		end
+		else
+		begin
+			case(state)
+				RAM_INIT: //iterates through all entries in the RAM writing, assume all entries take 1 tick to write
+				begin
+					if(address == 5'b11111)
+					begin
+						state <= WAIT_FOR_SCORE;
+					end
+					else
+					begin
+						address <= address + 1'b1;
+					end
+				end
+				WAIT_FOR_SCORE: //waits for a request to start score processing
+				begin
+					address <= 1'b0;
+					R_W <= 1'b0;
+					if(score_Request == 1'b1)
+					begin
+						state <= FETCH;
+						i_Final_Score <= score;
+					end
+				end
+				FETCH: //start read
+				begin
+					address <= PID;
+					state <= RAM_CYCLE_1;
+				end
+				RAM_CYCLE_1: //wait for read to finish
+				begin
+					state <= RAM_CYCLE_2;
+				end
+				RAM_CYCLE_2: //wait for read to finish
+				begin
+					state <= CATCH;
+				end
+				CATCH: //catch the output of the RAM for internal use
+				begin
+					catch_RAM <= score_Read;
+					state <= CHECK_PB;
+				end
+				CHECK_PB: // checks if this is a new PB
+				begin
+					if(score > catch_RAM)
+					begin
+						state <= UPDATE_PB;
+					end
+					else
+					begin
+						valid <= 1'b1;
+						state <= CLEANUP;
+					end
+				end
+				UPDATE_PB: //sends the players new PB to RAM to be saved
+				begin
+					address <= PID;
+					R_W <= 1'b1;
+					score_Write <= i_Final_Score;
+					catch_RAM <= i_Final_Score;
+					state <= CHECK_GLOBAL_BEST;
+				end
+				CHECK_GLOBAL_BEST: //checks if the new PB beats the current best global score
+				begin
+					R_W <= 0;
+					if(score > global_Best_Score)
+					begin
+						global_Best_Score <= i_Final_Score;
+						best_Player <= PID;
+						new_GB <= 1'b1;
+						valid <= 1'b1;
+						state <= CLEANUP;
+					end
+					else
+					begin
+						new_PB <=1'b1;
+						valid <= 1'b1;
+						state <= CLEANUP;
+					end
+				end
+				CLEANUP:
+				begin
+					new_GB <= 1'b0;
+					new_PB <=1'b0;
+					valid <= 1'b0;
+
+					//output forcing
+					best_Score_O <= global_Best_Score; //global best score
+					best_PID_O <= best_Player; //best ID
+					pB_O <= catch_RAM; //best score of the current logged in player
+					final_Score <= i_Final_Score;
+					if(score_Request == 1'b0)
+					begin
+						state <= WAIT_FOR_SCORE;
+					end
+				end
+			endcase
+		end
+	end
+endmodule

@@ -1,0 +1,131 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vTestbench_Timer_1s
+!s110 1651634825
+!i10b 1
+!s100 lPWKGJY^ef3B=WkM5ecZl3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEfeJ9?FVDcdBj_YPWCBZS0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer
+w1651634692
+Z3 8C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Testbench_Variable_Timer.v
+Z4 FC:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Testbench_Variable_Timer.v
+!i122 0
+Z5 L0 8 42
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1651634825.000000
+Z7 !s107 C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Testbench_Variable_Timer.v|
+Z8 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Testbench_Variable_Timer.v|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+n@testbench_@timer_1s
+vTestbench_Variable_Timer
+Z11 !s110 1651964897
+!i10b 1
+!s100 bHOVddQ`gQUTd;Y_ROa:E3
+R0
+IdRJ4>H?`8I0LE;C]`O_]h2
+R1
+R2
+w1651635366
+R3
+R4
+!i122 20
+R5
+R6
+r1
+!s85 0
+31
+Z12 !s108 1651964897.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@testbench_@variable_@timer
+vTimer_100ms
+R11
+!i10b 1
+!s100 ZF8>HZ7gRG<KbD2EIS^RR1
+R0
+I_C917FY@>fDlCjjG5[7Sk0
+R1
+R2
+w1647013613
+8C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Timer_100ms.v
+FC:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Timer_100ms.v
+!i122 22
+L0 5 38
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Timer_100ms.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Timer_100ms.v|
+!i113 1
+R9
+R10
+n@timer_100ms
+vTimer_1ms
+R11
+!i10b 1
+!s100 [9D^eDh;R4fjLnm9zTz>N0
+R0
+Ik^0AnWlOAUEM5IGR1V_gJ0
+R1
+R2
+w1647014374
+8C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Timer_1ms.v
+FC:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Timer_1ms.v
+!i122 21
+L0 5 35
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Timer_1ms.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Timer_1ms.v|
+!i113 1
+R9
+R10
+n@timer_1ms
+vVariable_Timer
+R11
+!i10b 1
+!s100 RIPUAZRg0fPU8jFIMz9`_2
+R0
+I9`]J_9IZI`YXPKlHj:mA;3
+R1
+R2
+w1651635344
+8C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Variable_Timer.v
+FC:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Variable_Timer.v
+!i122 23
+L0 7 48
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Variable_Timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Chris/Documents/school/UH_Sem_6/Advanced_Digital_Design/Lab/Final_Project/sim/Variable_Timer/Variable_Timer.v|
+!i113 1
+R9
+R10
+n@variable_@timer

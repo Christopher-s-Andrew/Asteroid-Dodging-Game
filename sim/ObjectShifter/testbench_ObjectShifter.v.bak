@@ -1,0 +1,77 @@
+// Author: Matthew Andersen 2071
+// testbench_ObjectShifter
+// This tests the object shifter with the random 3-bit RNG_LFSR_3b input changing every cycle.
+// It should alternate between sending a shape then nothing then a shape then nothing as long as 
+// ShiftPulse keeps coming.
+
+`timescale 1 ns/ 100 ps
+module testbench_ObjectShifter();
+  reg ShiftPulse, ObjShifterEnable, Reconfig, clk, rst;
+  wire [2:0] RNGReadIn;
+  wire [6:0] Out5, Out4, Out3, Out2, Out1, Out0;
+  wire DebrisDodge;
+
+  ObjectShifter DUT_ObjectShifter(ShiftPulse, ObjShifterEnable,Reconfig,RNGReadIn,Out5, Out4, Out3, Out2, Out1, Out0, DebrisDodge,clk, rst);
+  RNG_LFSR_3b RNG3bRaw(1'b1, RNGReadIn, clk, rst);
+
+  always begin
+    clk = 1'b0; #10;
+    clk = 1'b1; #10;
+  end
+  
+  initial begin
+    ShiftPulse = 1'b0;
+    ObjShifterEnable = 1'b0;
+    Reconfig = 1'b0;
+    rst = 1'b1;
+    @(posedge clk);@(posedge clk);@(posedge clk);
+    #5 rst = 1'b0;  // initial reset
+    @(posedge clk);@(posedge clk);@(posedge clk);
+    #5 rst = 1'b1; @(posedge clk); ObjShifterEnable = 1'b1;
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    #5 ShiftPulse = 1'b1; @(posedge clk); #5 ShiftPulse = 1'b0; @(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+    @(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+  end
+endmodule
+
+

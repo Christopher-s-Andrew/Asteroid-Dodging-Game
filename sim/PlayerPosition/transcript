@@ -1,0 +1,16 @@
+# Reading pref.tcl
+# OpenFile C:/GitHub/Q4-ADD-Project/ADDFINALPROJ/sim/PlayerPosition/testbench_PlayerPosition.v
+project open C:/ADD_Demos/ADDFINALPROJ/sim/PlayerPosition/PlayerPosition
+# Loading project PlayerPosition
+# Compile of PlayerPosition.v was successful.
+# Compile of testbench_PlayerPosition.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench_PlayerPosition
+# vsim -gui work.testbench_PlayerPosition 
+# Start time: 14:49:22 on May 09,2022
+# Loading work.testbench_PlayerPosition
+# Loading work.PlayerPosition
+add wave -r /*
+run 2000 ns
+# End time: 14:52:57 on May 09,2022, Elapsed time: 0:03:35
+# Errors: 0, Warnings: 2

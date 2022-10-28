@@ -1,0 +1,17 @@
+# Compile of ObjectShifter.v was successful.
+# Compile of testbench_ObjectShifter.v was successful.
+# Compile of RNG_LFSR_3b.v was successful.
+# Compile of Decoder_3bTo7bShape.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.testbench_ObjectShifter
+# vsim -gui work.testbench_ObjectShifter 
+# Start time: 13:37:10 on May 04,2022
+# Loading work.testbench_ObjectShifter
+# Loading work.ObjectShifter
+# Loading work.Decoder_3bTo7bShape
+# Loading work.RNG_LFSR_3b
+add wave sim:/testbench_ObjectShifter/*
+run 3500 ns
+run 3500 ns
+# End time: 13:39:49 on May 04,2022, Elapsed time: 0:02:39
+# Errors: 0, Warnings: 2
